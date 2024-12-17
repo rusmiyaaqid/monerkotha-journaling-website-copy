@@ -1,0 +1,387 @@
+
+
+.dashboard-container {
+    /*max-width: 500px;*/
+    margin: 0 auto;
+    /*padding: 20px;*/
+    border-radius: 8px;
+    /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);*/
+    /*background-color: #f7f7f7;*/
+    font-family: Arial, sans-serif;
+    position: relative;
+    transition: 'all 0.3s ease',
+  }
+  
+
+  .dashboard-title {
+    /*font-size: 24px;*/
+    /*color: #333;*/
+    color: 'black';
+    margin-bottom: 20px;
+    font-family: 'Newsreader';
+    font-size: 3rem;
+    font-weight: 400;
+    max-width: 1100px;
+    flex: 1;
+    padding-top: 70px,
+
+  }
+  .dashboard-info{
+    font-family: 'Newsreader';
+    color: #655656;
+    font-size: 2rem;
+    
+
+  }
+  
+  .donation-form{
+    background-color: transparent;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    /*max-width: 1100px;*/
+    
+  }
+
+  .radio-group {
+    background-color: transparent;
+    display: flex;
+    /*justify-content: space-around;*/
+    justify-content: left;
+    gap:15px;
+    margin-left:0px;
+    margin-bottom: 15px;
+    padding:2px;
+    /*max-width: 500px;*/
+  }
+  
+  .radio-group label {
+    font-size: 20px;    
+    color: #655656;
+    display: block;
+    font-family: "Newsreader";
+    cursor: pointer;
+
+  }
+  /*new after custom styling of radio buttons below*/
+  /*.radio-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1em;
+  }
+    */
+  
+  .radio-option input[type="radio"] {
+    display: none; /* Hide default radio */
+  }
+  
+  .custom-radio {
+    width: 13px; /* Square size */
+    height: 13px;
+    border: 1px solid #655656; /* Unselected border color */
+    background-color: white;
+    border-radius: 4px; /* Small radius for square edges */
+    display: inline-block;
+    margin-right: 0em;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .radio-option input[type="radio"]:checked + .custom-radio {
+    background-color: #F5F0E3; /* Change to your desired color */
+    border-color: #655656;
+    
+  }
+  
+  .form-group {
+    display: flex;
+    margin-bottom: 15px;
+    /*max-width: 500px;*/
+
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 15px;
+    color: #655656;
+    margin-bottom: 5px;
+    font-family: "Newsreader";
+    
+  }
+  
+  .form-group input[type="number"],
+  .form-group input[type="text"],
+  .form-group input[type="date"] {
+    width: 100%;
+    padding: 22px;
+    /*border: 1px solid #ddd;*/
+    border: transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #655656;
+  }
+  .form-group input {
+    width: 100%;
+    box-sizing: border-box; /* Prevents padding from affecting total width */
+    background-color: #F5F0E3;
+    font-family: sans-serif;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #F5F0E3;
+    font-family:Newsreader;
+    color: #655656;
+    /*border: solid 1px;*/
+    border: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #F5F0E3;
+    border-color: #655656;
+    border: solid 0.5px;
+  }
+
+  .custom-divider {
+    border: none; /* Remove default border */
+    border-top: 1px solid #ccc; /* Define color and thickness */
+    margin: 1em 0; /* Add space around the divider */
+    width: 100%; /* Full width */
+  }
+ 
+  
+  .donation-history {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    position:relative;
+    background-color: #F5F0E3;
+    border-radius: 4px;
+    padding-block:10px;
+    
+  }
+  
+  .donation-item {
+    border-color: #655656;
+    /*background-color: #D7D1C8;*/
+    /*border: 1px solid #ddd;*/
+    /*padding:22px; this is what the other slots have*/
+    padding: 19px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-family: 'Newsreader';
+    color: #655656;
+    font-size: 1.5rem;
+  }
+  .delete-button2{
+   
+        position: absolute;
+        right: 16px;
+        color: #655656;
+        border: transparent;
+        background-color: transparent;
+        cursor:pointer;
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s ease; /* Smooth transition for opacity */
+   
+  }
+  
+  
+.donation-item:hover .delete-button2 {
+    opacity: 1; /* Show on hover */
+}
+
+@media (max-width: 375px) {
+
+.dashboard-container {
+  /*max-width: 500px;*/
+  margin: 0 auto;
+  /*padding: 20px;*/
+  border-radius: 8px;
+  /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);*/
+  /*background-color: #f7f7f7;*/
+  font-family: Arial, sans-serif;
+  position: relative;
+  transition: 'all 0.3s ease',
+}
+
+
+.dashboard-title {
+  /*font-size: 24px;*/
+  /*color: #333;*/
+  color: 'black';
+  margin-bottom: 0px;
+  font-family: 'Newsreader';
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 1100px;
+  flex: 1;
+  padding-top: 0px,
+
+}
+.dashboard-info{
+  font-family: 'Newsreader';
+  color: #655656;
+  font-size: .65rem;
+  margin-top:0px;
+  
+
+}
+
+.donation-form{
+  background-color: transparent;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  /*max-width: 1100px;*/
+  
+}
+
+.radio-group {
+  background-color: transparent;
+  display: block; /*changing this to display flex will make the 2 options in one line*/
+  /*justify-content: space-around;*/
+  justify-content: left;
+  gap:0px;
+  margin-left:0px;
+  margin-bottom: 6px;
+  padding:0px;
+  /*max-width: 500px;*/
+}
+
+.radio-group label {
+  font-size: 12px;    
+  color: #655656;
+  display: block;
+  font-family: "Newsreader";
+  cursor: pointer;
+
+
+}
+
+
+.radio-option input[type="radio"] {
+  display: none; /* Hide default radio */
+}
+
+.custom-radio {
+  width: 6.5px; /* Square size */
+  height: 6.5px;
+  border: 1px solid #655656; /* Unselected border color */
+  background-color: white;
+  border-radius: 4px; /* Small radius for square edges */
+  display: inline-block;
+  margin-right: 0em;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.radio-option input[type="radio"]:checked + .custom-radio {
+  background-color: #F5F0E3; /* Change to your desired color */
+  border-color: #655656;
+  
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 1px;
+  /*max-width: 500px;*/
+  padding-block:0px;
+
+
+}
+
+.form-group label {
+  display: block;
+  font-size: 10px;
+  color: #655656;
+  margin-bottom: 5px;
+  font-family: "Newsreader";
+  
+}
+
+.form-group input[type="number"],
+.form-group input[type="text"],
+.form-group input[type="date"] {
+  width: 100%;
+  padding: 14px;
+  /*border: 1px solid #ddd;*/
+  border: transparent;
+  border-radius: 4px;
+  font-size: 8px;
+  color: #655656;
+}
+.form-group input {
+  width: 100%;
+  box-sizing: border-box; /* Prevents padding from affecting total width */
+  background-color: #F5F0E3;
+  font-family: sans-serif;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px;
+  font-size: 8px;
+  background-color: #F5F0E3;
+  color: #655656;
+  /*border: solid 1px;*/
+  border: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.submit-button:hover {
+  background-color: #F5F0E3;
+  border-color: #655656;
+  border: solid 0.5px;
+}
+
+.custom-divider {
+  border: none; /* Remove default border */
+  border-top: 1px solid #ccc; /* Define color and thickness */
+  margin: 1em 0; /* Add space around the divider */
+  width: 100%; /* Full width */
+}
+
+
+.donation-history {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  position:relative;
+  background-color: #F5F0E3;
+  border-radius: 4px;
+  padding-block:5px;
+  
+}
+
+.donation-item {
+  border-color: #655656;
+  padding: 10px;
+  margin-bottom: 0px;
+  border-radius: 4px;
+  font-family: 'Newsreader';
+  color: #655656;
+  font-size: 8px;
+}
+.delete-button2{
+ 
+      position: absolute;
+      right: 16px;
+      color: #655656;
+      border: transparent;
+      background-color: transparent;
+      cursor:pointer;
+      opacity: 0; /* Initially hidden */
+      transition: opacity 0.3s ease; /* Smooth transition for opacity */
+ 
+}
+
+
+.donation-item:hover .delete-button2 {
+  opacity: 1; /* Show on hover */
+}
+
+}
